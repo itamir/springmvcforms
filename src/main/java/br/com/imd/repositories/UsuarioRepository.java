@@ -3,13 +3,20 @@ package br.com.imd.repositories;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import br.com.imd.domain.Usuario;
 
+@Service
 public class UsuarioRepository {
 
-	public static List<Usuario> usuarios = new ArrayList<Usuario>();
+	public List<Usuario> usuarios;
+	
+	public UsuarioRepository() {
+		usuarios = new ArrayList<Usuario>();
+	}
 
-	public static List<Usuario> getUsuarios() {
+	public List<Usuario> getUsuarios() {
 		return usuarios;
 	}
 
